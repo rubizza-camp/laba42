@@ -5,7 +5,7 @@ rubocop:
   version: 0.54.0
 
 reek:
-  enable: false
+  config_file: .reek.yml
 
 jshint:
   enabled: false
