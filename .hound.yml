@@ -5,7 +5,6 @@ rubocop:
   version: 0.54.0
 
 reek:
-  version:
   config_file: .reek.yml
   version: 5.0.2
 
