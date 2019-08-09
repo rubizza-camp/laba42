@@ -17,11 +17,12 @@ ActiveRecord::Schema.define(version: 2019_08_08_144944) do
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.text "info"
     t.jsonb "skills"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,4 +46,5 @@ ActiveRecord::Schema.define(version: 2019_08_08_144944) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "projects", "users"
 end
