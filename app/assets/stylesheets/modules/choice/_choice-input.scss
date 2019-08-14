@@ -3,17 +3,17 @@
   flex-direction: column;
 
   &__field {
-    border: 2px solid #bbbbbb;
+    border: 2px solid $light-gray;
     font-size: 2ch;
     height: 6.5ch;
     margin-bottom: -0.2ch;
+    opacity: 0.4;
     outline: none;
     padding: 2ch;
     width: 55ch;
-    opacity: 0.4;
 
     &::placeholder{
-      color: #9D9ca2;
+      color: #9d9ca2;
   }
  }
 }

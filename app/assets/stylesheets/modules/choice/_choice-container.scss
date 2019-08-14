@@ -15,14 +15,14 @@
   }
 
   &__buttons__button {
-    background-color: #ffffff;
+    background-color: $white-color;
     border: 2px solid $main-blue;
     color: $main-blue;
     margin: 2vh;
     width: 25ch;
 
     &:hover {
-      color: #ffffff;
+      color: $white-color;
     }
   }
 }
