@@ -1,0 +1,16 @@
+.choice-text{
+  text-align: center;
+  margin-top: -15vh;
+
+  &__main{
+    width: 30ch;
+    font-size: 5ch;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__muted{
+    padding: 3ch;
+    font-size: 2ch;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}

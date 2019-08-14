@@ -1,0 +1,19 @@
+<div class="choice-container">
+
+  <div class="choice-container__text">
+    <h2><%= t(:wu_search) %></h2>
+  </div>
+
+  <div class="choice-container__buttons">
+      <div ><%= link_to home_customer_edit_path do %>
+          <%= content_tag :span, t(:customer), class: "button choice-container__buttons__button button--large" %>
+        <% end %>
+      </div>
+
+     <div><%= link_to home_developer_edit_path do %>
+         <%= content_tag :span, t(:developer), class: "button choice-container__buttons__button button--large" %>
+       <% end %>
+     </div>
+  </div>
+</div>
+

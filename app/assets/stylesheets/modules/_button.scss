@@ -51,6 +51,14 @@
       background-color: $white-color;
     }
   }
+
+  &__button-next{
+    width: 25ch;
+    border-radius: 4px;
+    border: 0;
+    margin-top: 6ch;
+    margin-left: 20ch;
+  }
 }
 
 
