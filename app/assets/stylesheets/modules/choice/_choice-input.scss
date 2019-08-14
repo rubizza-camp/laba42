@@ -3,17 +3,17 @@
   flex-direction: column;
 
   &__field {
-    outline: none;
-    margin-bottom: -0.2ch;
-    width: 55ch;
-    padding: 2ch;
+    border: 2px solid #bbbbbb;
     font-size: 2ch;
     height: 6.5ch;
-    border: 2px solid #BBBBBB;
+    margin-bottom: -0.2ch;
+    outline: none;
+    padding: 2ch;
+    width: 55ch;
     opacity: 0.4;
 
     &::placeholder{
-      color: #9D9CA2;
+      color: #9D9ca2;
   }
  }
 }
