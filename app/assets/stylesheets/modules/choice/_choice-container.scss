@@ -1,0 +1,28 @@
+.choice-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 87vh;
+
+  &__text{
+    margin-top: -20vh;
+  }
+
+  &__buttons{
+    margin: 5vh;
+    display: -webkit-flex;
+  }
+
+  &__buttons__button{
+    background-color: white;
+    border: 2px solid #617AF9;
+    color: #617AF9;
+    margin: 2vh;
+    width: 25ch;
+
+    &:hover{
+      color: white;
+    }
+  }
+}

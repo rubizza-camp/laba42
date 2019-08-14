@@ -17,8 +17,7 @@
 @import "base/variables";
 @import "fonts/open_sans";
 @import "modules/site-header";
-@import "modules/start/start-large";
-@import "modules/start/start-secondary";
-@import "modules/start/start-third";
+@import "modules/start/*";
 @import "modules/button";
 @import "modules/site-footer";
+@import "modules/choice/*";

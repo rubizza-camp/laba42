@@ -16,7 +16,15 @@ ru:
   start_page_title: "Поможем найти первую работу или перспективного коллегу!"
   support: "Поддержка"
   telegram: "Мы в Telegram"
-
+  let_acquainted: "Let`s gets acquainted!"
+  wu_search: "What are you looking for?"
+  customer: "Workers"
+  developer: "Work"
+  text_button: "Next"
+  customer_registration_head_text: "Awesome! Many talented guys are waiting for your tasks!"
+  customer_registration_head_text_muted: "Tell us about yourself and get started!"
+  input_company_name: "Name your company"
+  input_phone: "Your number"
 
 
 

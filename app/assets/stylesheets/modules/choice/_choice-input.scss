@@ -1,0 +1,18 @@
+.choice-input{
+  display: flex;
+  flex-direction: column;
+
+  &__field{
+    outline: none;
+    margin-bottom: -0.2ch;
+    width: 55ch;
+    padding: 2ch;
+    font-size: 2ch;
+    height: 6.5ch;
+    border: 2px solid rgba(187, 187, 187, 0.3);
+
+    &::placeholder{
+      color: rgba(157, 156, 162, 0.6);
+  }
+ }
+}

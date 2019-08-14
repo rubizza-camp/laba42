@@ -27,6 +27,14 @@
   &:active {
     background-color: $button-press;
   }
+
+  &__button-next{
+    width: 25ch;
+    border-radius: 4px;
+    border: 0;
+    margin-top: 6ch;
+    margin-left: 20ch;
+  }
 }
 
 
