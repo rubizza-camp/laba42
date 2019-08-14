@@ -1,16 +1,18 @@
-.choice-text{
+.choice-text {
   text-align: center;
   margin-top: -15vh;
 
-  &__main{
+  &__main {
     width: 30ch;
     font-size: 5ch;
-    color: rgba(0, 0, 0, 0.7);
+    color: #000000;
+    opacity: 0.7;
   }
 
-  &__muted{
+  &__muted {
     padding: 3ch;
     font-size: 2ch;
-    color: rgba(0, 0, 0, 0.4);
+    opacity: 0.4;
+    color: #000000;
   }
 }
