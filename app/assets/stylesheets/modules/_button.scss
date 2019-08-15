@@ -52,11 +52,18 @@
     }
   }
 
-  &__button-next {
-    border: 0;
-    border-radius: 4px;
-    margin-left: 20ch;
-    margin-top: 6ch;
-    width: 25ch;
+  &--choice{
+    border: 0.09375rem solid $main-blue;
+    width: 10.3125rem;
+
+    &:hover {
+      background-color: $button-hover;
+      color: $white-color;
+    }
+
+    &:active {
+      background-color: $button-press;
+      color: $white-color;
+    }
   }
 }
