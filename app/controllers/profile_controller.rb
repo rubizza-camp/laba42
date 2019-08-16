@@ -32,7 +32,7 @@ class ProfileController < ApplicationController
   protected
 
   def profile_params
-    params.permit(%i[info name])
+    params.permit(%i[info name role])
   end
 
   def set_user
