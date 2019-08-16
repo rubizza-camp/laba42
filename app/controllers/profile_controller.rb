@@ -16,7 +16,7 @@ class ProfileController < ApplicationController
     raise "Unknown role: #{role}" unless User::USER_ROLES.key?(role)
 
     @user.update(role: role)
-    redirect_to '/profile/customer_setup_info'
+    redirect_to "/profile/#{params[:role]}_setup_info"
   end
 
   def edit; end
@@ -25,6 +25,7 @@ class ProfileController < ApplicationController
     if @user.update(profile_params)
       redirect_to '/'
     else
+      # render 'profile/edit_profile'
       render 'profile/customer_setup_info'
     end
   end
@@ -32,7 +33,7 @@ class ProfileController < ApplicationController
   protected
 
   def profile_params
-    params.permit(%i[info name role])
+    params.permit(%i[info name])
   end
 
   def set_user
