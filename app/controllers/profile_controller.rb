@@ -23,17 +23,17 @@ class ProfileController < ApplicationController
 
   def update
     if @user.update(profile_params)
-      redirect_to '/'
-    else
       # render 'profile/edit_profile'
-      render 'profile/customer_setup_info'
+      redirect_to root_path
+    else
+      render customer_setup_info_profile_path
     end
   end
 
   protected
 
   def profile_params
-    params.permit(%i[info name])
+    params.permit(%i[info name phone_number company_name])
   end
 
   def set_user

@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   resources :projects
   resource :profile, controller: 'profile', only: %i[edit update] do
     post 'update_role'
+    post 'update'
     get 'edit_role'
     get 'customer_setup_info'
+    get 'developer_setup_info'
   end
 end
 # rubocop:enable Layout/SpaceInsideHashLiteralBraces
