@@ -30,7 +30,7 @@ class ProfileController < ApplicationController
       # render 'profile/edit_profile'
       redirect_to root_path
     else
-      render customer_setup_info_profile_path
+      redirect_to "/profile/#{@user.role}_setup_info"
     end
   end
 
