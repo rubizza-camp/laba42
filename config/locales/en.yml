@@ -1,64 +1,69 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   about: "About"
   about_company: "About company"
   about_yourself: "Tell about yourself"
   alias1: "Didn't receive confirmation instructions?"
   alias2: "Didn't receive unlock instructions?"
+  applies: "Interesting projects"
+  apply: "Applied"
+  apply_project: "Apply"
+  author: "Author"
+  back_to_all_project: "Back to the list of projects"
   bad_note: "Ouch! It seems this email already exists"
   company_name: "Company name"
+  confirm_password_button: "Confirm password"
+  cost: "Cost"
+  customer: "Workers"
+  customer_registration_head_text: "Awesome! Many talented guys are waiting for your tasks!"
+  customer_registration_head_text_muted: "Tell us about yourself and get started!"
+  deadline: "Deadline date"
+  delete_confirm: "Are you sure?"
+  destroy: "Delete"
+  developer: "Work"
   developer_registration_head_text: "What do you do?"
+  edit: "Edit"
+  edit_project: "Edit project"
   email: "Email"
+  errors_title: "wrongs input:"
   facebook: "Facebook"
   facebook_btn: "Enter through Facebook"
+  fixed_price: "Fixed price"
   forgot_pass: "Remind me my password, please"
+  forgot_password?: "Forgot password?"
+  forgot_password_label: "Write your e-mail and we will send a link to change the password"
+  free: "Free"
   good_note: "This email is suited"
   google_btn: "Enter through Google"
   greeting: "Welcome!"
-  info: "About"
+  i_remember_password: "I remember my password. Sign in"
+  info: "Info"
+  info_project: "Description of project/task"
+  input_name: "Your name"
+  input_phone: "Your number"
   introduce_yourself: "Please, introduce yourself"
+  keywords_project: "Keywords (through space /CSS HTML Ruby/)"
+  let_acquainted: "Let`s gets acquainted!"
+  lets_search: "Let's search something for you"
   log_in: "Login"
   log_out: "Log out"
-  lets_search: "Let's search something for you"
   name: "Your name"
+  negotiable_price: "Negotiable price"
+  new_project: "New project"
   password: "Your password"
   password_confirm: "Confirm your password"
   phone_number: "Phone number"
+  post_project: "Post a project"
   profile_edit: "Update your profile"
+  project: "Project"
   published: "Published at "
+  refuse_project: "Refuse"
   remark_to_login: "Do you already have an account?"
   remark_to_signup: "if you're not with us yet"
+  return_to_list_project: "Return to projects list"
   save: "Save"
+  search: "Search"
+  send_link: "Send link"
+  show: "Show details"
   show_more: "Show more"
   show_wow: "Wow, how many interesting things!"
   sign_in_with: "Sign in with"
@@ -72,48 +77,11 @@ en:
   support: "Support"
   take_job: "Take a job"
   telegram: "Telegram Chat"
-  let_acquainted: "Let`s gets acquainted!"
-  wu_search: "What are you looking for?"
-  customer: "Workers"
-  developer: "Work"
-  next_button: "Next"
-  customer_registration_head_text: "Awesome! Many talented guys are waiting for your tasks!"
-  customer_registration_head_text_muted: "Tell us about yourself and get started!"
-  input_name: "Your name"
-  input_company_name: "Name your company"
-  input_phone: "Your number"
-  post_project: "Post a project"
-  search: "Search"
-  show: "Show details"
-  back_to_all_project: "Back to the list of projects"
-  apply_project: "Apply"
-  refuse_project: "Refuse"
-  applies: "Interesting projects"
-  title: "Title"
-  delete_confirm: "Are you sure?"
-  author: "Author"
-  destroy: "Delete"
-  edit: "Edit"
-  apply: "Applied"
-  forgot_password?: "Forgot password?"
-  forgot_password_label: "Write your e-mail and we will send a link to change the password"
-  i_remember_password: "I remember my password. Sign in"
-  send_link: "Send link"
+  test_task: "Test task"
   think_up_password_title: "Think up new password"
   think_up_password_label: "Password must be at least 6 characters"
-  confirm_password_button: "Confirm password"
-  new_project: "New project"
+  title: "Title"
   title_project: "Name of project/task"
-  info_project: "Description of project/task"
-  keywords_project: "Keywords (through space)"
-  errors_title: "wrongs input:"
   type_project: "Type of project:"
-  project: "Project"
-  test_task: "Test task"
-  cost: "Cost"
-  fixed_price: "Fixed price"
-  negotiable_price: "Negotiable price"
-  free: "Free"
-  return_to_list_project: "return to list projects"
-  deadline: "Deadline date"
-  edit_project: "Edit project"
+  next_button: "Next"
+  wu_search: "What are you looking for?"

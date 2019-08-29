@@ -3,7 +3,7 @@
   <h2 class="user-form__subtitle"><%= t(:customer_registration_head_text_muted) %></h2>
   <%= form_with url: profile_path, method: :patch do %>
     <div class="form-field">
-      <%= text_field_tag :company_name, '', class: "form-field", placeholder: t(:input_company_name) %>
+      <%= text_field_tag :company_name, '', class: "form-field", placeholder: t(:company_name) %>
     </div>
     <div class="form-field">
       <%= text_field_tag :phone_number, '', placeholder:  t(:input_phone) %>
