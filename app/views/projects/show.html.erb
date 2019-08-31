@@ -69,10 +69,12 @@
   <% end %>
 
     <% if @apply %>
+    <%= link_to applies_path(@apply), style: 'text-decoration: none; color: black;' do  %>
       <p class="project-apply-text">
         <%= t(:apply)%>
         <%= @apply.created_at.localtime.strftime('%d/%m/%Y %H:%M') %>
       </p>
+    <%end %>
     <% else %>
       <%= button_to t(:apply_project), {controller: 'applies', action: 'create', project_id: @project.id}, class: 'button button--blue button--login project-button-position' %>
     <% end %>
