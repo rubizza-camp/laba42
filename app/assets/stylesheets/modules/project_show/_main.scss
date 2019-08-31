@@ -17,13 +17,11 @@
 }
 
 .project-cost {
-  align-items: center;
   background-color: $background-yellow-light;
   font-size: 1rem;
-  justify-content: center;
-  max-height: 5rem;
-  min-width: 9rem;
-  padding: 0.7rem 1rem;
+  text-align: center;
+  padding: 1rem;
+  min-width: 10rem;
 }
 
 .project-title {
@@ -74,7 +72,8 @@
 }
 
 .project-apply-text {
-  color: $white-color;
+  color: $black-color;
+  width: 10rem;
 }
 
 .project-comments-title {
@@ -128,9 +127,6 @@
   padding-left: 1rem;
 }
 
-.project-apply-text {
-  color: $black-color;
-}
 
 .project-applies-refuse-button {
 

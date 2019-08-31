@@ -20,8 +20,7 @@ ActiveRecord::Schema.define(version: 2019_08_31_221601) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "status_apply", default: false
-    t.boolean "apply_status", default: false
+    t.boolean "apply_status"
     t.index ["project_id", "user_id"], name: "index_applies_on_project_id_and_user_id", unique: true
   end
 
