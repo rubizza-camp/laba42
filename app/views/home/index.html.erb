@@ -28,7 +28,7 @@
         <div class="start-secondary__item-wrapper">
           <h5 class="start-secondary__item-title" ><%= p.title %></h5>
           <span class="start-secondary__item-subtitle-item"><%= t(:published) %><%= p.created_at.localtime.strftime('%d/%m/%Y') %></span>
-          <div class="start-secondary__item-text" ><%= markdown(p.info) %></div>
+          <div class="start-secondary__item-text" ><%= markdown(p.info.html_safe) %></div>
         </div>
           <% content_tag :span, t(:take_job) %>
         <% end %>
