@@ -51,9 +51,13 @@
         <%= t(:skills) %>
       </div>
       <p>
+      <div class="in-line-items">
         <% @project.skills.each do |s| %>
-          <a class="project-skills-item"><%= s.upcase %></a>
+          <div class="project-skills-item">
+            <%= s.upcase  %>
+          </div>
         <% end %>
+      </div>
       </p>
     </div>
   <% end %>
