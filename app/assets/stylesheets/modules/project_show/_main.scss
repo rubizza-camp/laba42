@@ -1,0 +1,129 @@
+.in-line-items {
+  display: flex;
+}
+
+.all-projects {
+  border-bottom: 3px solid $main-blue;
+  color: $main-blue;
+  padding: 0.75rem 1.5rem;
+}
+
+.my-projects {
+  padding: 0.75rem  1.5rem;
+}
+.head-border-bottom {
+  border-bottom: 2px solid $shadow-body;
+  margin: 2rem 0;
+}
+
+.project-cost {
+  align-items: center;
+  background-color: $background-yellow-light;
+  font-size: 1rem;
+  justify-content: center;
+  max-height: 3rem;
+  min-width: 9rem;
+  padding: 0.7rem 1rem;
+}
+
+.project-title {
+  font-size: 1.9rem;
+  padding: 0 1rem;
+}
+
+.project-expires {
+  font-size: 0.8125rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  margin-right: 2rem;
+  color: $light-gray;
+}
+
+.project-company-name {
+  background-color: $shadow-body;
+  padding: 0.2rem 1.5rem;
+}
+
+.gray-text {
+  color: $gray;
+  font-size: 0.8rem;
+}
+
+
+.disable-sides-margin {
+  margin: 1rem 0;
+  padding: 1rem;
+  min-height: 9rem;
+  width: 100%;
+}
+
+.project-skills {
+  margin-top: 1.75rem;
+
+}
+
+.project-skills-title {
+  margin: 0.5rem 0;
+}
+
+.project-skills-item {
+  background-color: $skills-blue-opacity;
+  color: $footer-blue;
+  margin-right: 0.7rem;
+  padding: 0.2rem 0.8rem;
+}
+
+.project-apply-text {
+  color: $white-color;
+}
+
+.project-comments-title {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  background-color: $background-light-gray;
+  text-align: left;
+  border-bottom: 2px solid $light-gray;
+}
+
+.project-button-position {
+  margin-top: 0;
+}
+
+.project-backlink-margin {
+  margin: 2rem 0;
+}
+
+.project-edit-links {
+  font-size: 1rem;
+  padding: 0 2rem;
+  background-color: $shadow-body;
+
+}
+
+.project-comment-item-own_name {
+  background-color: $background-light-gray;
+}
+
+.project-comment-item {
+  border: 2px solid $shadow-body;
+  margin: 0.5rem 2rem;
+  min-height: 4rem;
+  width: 95%;
+}
+
+.project-comment-owner {
+  font-style: italic;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  color: $footer-blue;
+}
+
+.project-comment-created_at {
+  margin: 0 0 0 1rem;
+  text-align: right;
+}
+
+.project-comment-content {
+  min-height: 1rem;
+  padding-left: 1rem;
+}

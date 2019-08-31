@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'redcarpet'
 
 module ApplicationHelper
   def show_devise_link?
@@ -7,5 +8,9 @@ module ApplicationHelper
     return false if action_name == 'edit_role'
 
     true
+  end
+
+  def markdown(text)
+    Markdown.new(text, :hard_wrap, :autolink).to_html.html_safe
   end
 end

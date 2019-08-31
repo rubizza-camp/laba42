@@ -1,70 +1,102 @@
-<p>
-  <strong><%= t(:title) %>:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong><%= t(:author) %>:</strong>
-  <%= @project.user.name %>
-</p>
-
-<p>
-  <strong><%= t(:info) %>:</strong>
-  <%= @project.info %>
-</p>
-
-<p>
-  <strong><%= t(:skills) %>:</strong>
-  <%= @project.skills*", " %>
-</p>
-
-<p>
-  <strong><%= t(:cost) %>:</strong>
-  <%= @project.cost %>
-</p>
-<p>
-  <strong><%= t(:deadline) %>:</strong>
-  <%= @project.deadline %>
-</p>
-<% if user_signed_in? %>
-
-  <div>
-    <% if @apply %>
-      <p><%= t(:apply)%> <%= @apply.created_at.localtime.strftime('%d/%m/%Y %H:%M') %></p>
-    <% else %>
-      <%= link_to t(:apply_project),{ controller: 'applies', action: 'create', project_id: @project.id},
-              {method: :post} %>
+<div class="project-main">
+  <div class="in-line-items head-border-bottom">
+      <div class="all-projects">
+        Все проекты
+      </div>
+      <div class="my-projects">
+        Мои проекты
+      </div>
+  </div>
+<div class="in-line-items">
+  <div class="project-cost">
+    <%= t(:project) %>:
+    <%= @project.cost %> $
+  </div>
+  <div class="project-title">
+    <%= @project.title %>
+    <% if can? :manage, @project %>
+        <%= link_to t(:edit), edit_project_path(@project), class: 'project-edit-links' %>
+        <%= link_to t(:destroy), project_path(@project),
+                    method: :delete,
+                    data: { confirm: t(:delete_confirm) }, class: 'project-edit-links' %>
     <% end %>
   </div>
+</div>
 
-  <% if can? :manage, @project %>
-    <%= link_to t(:edit), edit_project_path(@project) %>
-    <%= link_to t(:destroy), project_path(@project),
-                              method: :delete,
-                              data: { confirm: t(:delete_confirm) } %>
-  <% end %>
-<% end %>
-<%= link_to t(:back_to_all_project), projects_path %>
+<div class="in-line-items">
+  <div class="project-expires">
+      <%= t(:created_at) %>:
+      <%= @project.created_at.strftime("%d  %h  %Y") %>
+  </div>
+  <div class="project-expires">
+    <%= t(:expires) %>:
+    <%= @project.deadline.strftime("%d  %h  %Y") %>
+  </div>
+</div>
 
-<h2><%= t(:comments) %>:</h2>
-<%= render @project.comments %>
-
-<% if user_signed_in? %>
-
-  <h2><%= t(:add_comment) %>:</h2>
-
-  <%= form_with(model: @project.comments.build, local: true) do |form| %>
-    <div>
+  <% if @project.user.company_name %>
+    <div class="in-line-items">
+      <div class="project-company-name">
+        <a class="gray-text"><%= t(:company_name) %>:</a>
+        <%= @project.user.company_name %>
+      </div>
+    </div>
+  <%  end %>
+  <div class="form-input disable-sides-margin">
+    <%= markdown(@project.info) %>
+  </div>
+  <% unless @project.skills.empty? %>
+    <div class="project-skills">
+      <div class="project-skills-title">
+        <%= t(:skills) %>
+      </div>
       <p>
-        <%= form.label t(:comment) %><br>
-        <%= form.text_area :content %>
-      </p>
-
-      <%= hidden_field_tag :project_id, @project.id %>
-
-      <p>
-        <%= form.submit %>
+        <% @project.skills.each do |s| %>
+          <a class="project-skills-item"><%= s.upcase %></a>
+        <% end %>
       </p>
     </div>
   <% end %>
-<% end %>
+
+    <% if @apply %>
+      <p class="project-apply-text">
+        <%= t(:apply)%>
+        <%= @apply.created_at.localtime.strftime('%d/%m/%Y %H:%M') %>
+      </p>
+    <% else %>
+      <%= button_to t(:apply_project), {controller: 'applies', action: 'create', project_id: @project.id}, class: 'button button--blue button--login project-button-position' %>
+    <% end %>
+<div class=" project-backlink-margin">
+
+  <%= link_to t(:back_to_all_project), projects_path,class: 'project-company-name' %>
+</div>
+
+
+
+  <div class="project-comments-title"><%= t(:comments) %>:</div>
+
+  <% @project.comments.each do | comment | %>
+  <div class="project-comment-item">
+    <div class="project-comment-item-own_name">
+      <p class="project-comment-owner"><%= comment.user.name %>:</p>
+      <div class="project-comment-content"><%= markdown(comment.content) %></div>
+      <p class="project-expires project-comment-created_at"><%= comment.created_at.localtime.strftime('%d/%m/%Y %H:%M') %></p>
+    </div>
+  </div>
+  <%end %>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: @project.comments.build, local: true) do |form| %>
+      <div>
+        <p>
+          <%= form.label t(:comment) %><br>
+          <%= form.text_area :content, class: 'form-main__text-area'%>
+        </p>
+        <%= hidden_field_tag :project_id, @project.id %>
+        <p>
+          <%= form.submit class: 'button button--white button--large button--choice' %>
+        </p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
