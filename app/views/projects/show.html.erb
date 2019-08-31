@@ -37,8 +37,14 @@
   <% if @project.user.company_name %>
     <div class="in-line-items">
       <div class="project-company-name">
-        <a class="gray-text"><%= t(:company_name) %>:</a>
+        <a class="gray-text"><%= t(:project_owner_company_name) %>:</a>
         <%= @project.user.company_name %>
+      </div>
+    </div>
+    <div class="in-line-items">
+      <div class="project-company-name">
+        <a class="gray-text"><%= t(:project_owner_name) %>:</a>
+        <%= @project.user.name %>
       </div>
     </div>
   <%  end %>
@@ -48,7 +54,7 @@
   <% unless @project.skills.empty? %>
     <div class="project-skills">
       <div class="project-skills-title">
-        <%= t(:skills) %>
+        <%= t(:require_skills) %>:
       </div>
       <p>
       <div class="in-line-items">

@@ -123,3 +123,6 @@ ru:
   comments: "Комментарии"
   del_comment: "Удалить комментарий"
   add_comment: "Добавить комментарий"
+  project_owner_name: "Имя владельца проекта"
+  project_owner_company_name: "Имя компании"
+  require_skills: "Требуемые навыки"

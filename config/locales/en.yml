@@ -132,3 +132,6 @@ en:
   comments: "Comments"
   del_comment: "Remove comment"
   add_comment: "Add a comment"
+  project_owner_name: "Project owner name"
+  project_owner_company_name: "Company name"
+  require_skills: "Required skills"
