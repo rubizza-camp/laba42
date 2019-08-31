@@ -21,11 +21,14 @@ ru:
               blank: 'не может быть пустым'
             deadline:
               blank: 'не может быть пустым'
+            skills:
+              blank: 'не может быть пустым'
   footer:
     about: "О нас"
     support: "Поддержка"
     telegram: "Мы в Telegram"
     facebook: "Мы в Facebook"
+  about: "О нас"
   about_company: "О компании"
   about_yourself: "Расскажите о себе"
   add_task: "Добавить задачу"
