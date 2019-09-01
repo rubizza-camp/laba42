@@ -11,6 +11,7 @@
 .my-projects {
   padding: 0.75rem  1.5rem;
 }
+
 .head-border-bottom {
   border-bottom: 2px solid $shadow-body;
   margin: 2rem 0;
@@ -19,9 +20,9 @@
 .project-cost {
   background-color: $background-yellow-light;
   font-size: 1rem;
-  text-align: center;
-  padding: 1rem;
   min-width: 10rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .project-title {
@@ -30,17 +31,17 @@
 }
 
 .project-expires {
+  color: $light-gray;
   font-size: 0.8125rem;
-  margin-top: 1rem;
   margin-bottom: 1.25rem;
   margin-right: 2rem;
-  color: $light-gray;
+  margin-top: 1rem;
 }
 
 .project-company-name {
   background-color: $shadow-body;
-  padding: 0.2rem 1.5rem;
   margin: 0.2rem 0;
+  padding: 0.2rem 1.5rem;
 }
 
 .gray-text {
@@ -51,8 +52,8 @@
 
 .disable-sides-margin {
   margin: 1rem 0;
-  padding: 1rem;
   min-height: 9rem;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -77,11 +78,11 @@
 }
 
 .project-comments-title {
-  margin: 2rem 0;
-  font-size: 1.5rem;
   background-color: $background-light-gray;
-  text-align: left;
   border-bottom: 2px solid $light-gray;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
 }
 
 .project-button-position {
@@ -93,13 +94,13 @@
 }
 
 .project-edit-links {
+  background-color: $shadow-body;
   font-size: 1rem;
   padding: 0 2rem;
-  background-color: $shadow-body;
 
 }
 
-.project-comment-item-own_name {
+.project-comment-item-own-name {
   background-color: $background-light-gray;
 }
 
@@ -111,13 +112,13 @@
 }
 
 .project-comment-owner {
+  color: $footer-blue;
+  font-size: 1.2rem;
   font-style: italic;
   margin-left: 2rem;
-  font-size: 1.2rem;
-  color: $footer-blue;
 }
 
-.project-comment-created_at {
+.project-comment-created-at {
   margin: 0 0 0 1rem;
   text-align: right;
 }
@@ -125,9 +126,4 @@
 .project-comment-content {
   min-height: 1rem;
   padding-left: 1rem;
-}
-
-
-.project-applies-refuse-button {
-
 }

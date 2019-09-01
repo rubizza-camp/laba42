@@ -105,10 +105,10 @@
 
   <% @project.comments.each do | comment | %>
   <div class="project-comment-item">
-    <div class="project-comment-item-own_name">
+    <div class="project-comment-item-own-name">
       <p class="project-comment-owner"><%= comment.user.name %>:</p>
       <div class="project-comment-content"><%= markdown(comment.content) %></div>
-      <p class="project-expires project-comment-created_at"><%= comment.created_at.localtime.strftime('%d/%m/%Y %H:%M') %></p>
+      <p class="project-expires project-comment-created-at"><%= comment.created_at.localtime.strftime('%d/%m/%Y %H:%M') %></p>
     </div>
   </div>
   <%end %>
