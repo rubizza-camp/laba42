@@ -28,8 +28,8 @@
       <%= content_tag :span, t(:back_to_all_project), class: "button button--large button--white" %>
     <% end %>
   <% else %>
-    <%= link_to do %>
-      <%= content_tag :span, t(:show_more), class: "button button--large button--white" %>
+    <% link_to do %>
+      <% content_tag :span, t(:show_more), class: "button button--large button--white" %>
     <% end %>
   <% end %>
 </section>
