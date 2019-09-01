@@ -10,6 +10,7 @@ module ApplicationHelper
     true
   end
 
+  # This method smells of :reek:UtilityFunction
   def markdown(text)
     Markdown.new(text, :hard_wrap, :autolink).to_html.html_safe
   end
