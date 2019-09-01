@@ -135,3 +135,7 @@ en:
   project_owner_name: "Project owner name"
   project_owner_company_name: "Company name"
   require_skills: "Required skills"
+  status: "Status"
+  denied: "denied"
+  waiting: "waiting"
+  accept: "accept"
