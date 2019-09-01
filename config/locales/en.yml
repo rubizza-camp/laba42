@@ -139,3 +139,5 @@ en:
   denied: "denied"
   waiting: "waiting"
   accept: "accept"
+  delete_project: "Delete"
+  your_projects: "Yours projects"

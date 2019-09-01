@@ -1,13 +1,17 @@
-<div class="project-main">
-  <div class="in-line-items head-border-bottom">
-      <div class="all-projects">
-        Все проекты
-      </div>
-      <div class="my-projects">
-        Мои проекты
-      </div>
-  </div>
-<div class="in-line-items">
+<section class="top-menue">
+  <%= link_to projects_path do %>
+    <%= content_tag :span, t(:all_projects), class: "top-menue__item-first" %>
+  <% end %>
+  <% if current_user && current_user.role == 'customer' %>
+    <%= link_to my_projects_path do %>
+      <%= content_tag :span, t(:my_projects), class: "top-menue__item" %>
+    <% end %>
+  <% end %>
+  <%= link_to "#" do %>
+    <%= content_tag :span, t(:favorites), class: "top-menue__item" %>
+  <% end %>
+</section>
+<div class="project-title-block in-line-items">
   <div class="project-cost">
     <%= t(:project) %>:
     <%= @project.cost %> $

@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.project-title-block {
+  margin-top: 1.2rem;
+}
+
 .all-projects {
   border-bottom: 3px solid $main-blue;
   color: $main-blue;
@@ -47,7 +51,7 @@
 
 .gray-text {
   color: $gray;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 

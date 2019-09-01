@@ -133,3 +133,5 @@ ru:
   denied: "отказано"
   waiting: "ожидание"
   accept: "принят"
+  delete_project: "Удалить"
+  your_projects: "Ваши проекты"
