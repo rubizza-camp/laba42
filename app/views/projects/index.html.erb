@@ -19,17 +19,17 @@
   <% if user_signed_in? %>
     <% if current_user.role =='customer' %>
       <%= link_to new_project_path do %>
-        <%= content_tag :span, t(:post_project), class: "button button--large button--white" %>
+        <%= content_tag :span, t(:post_project), class: "button button--large button--light-gray" %>
       <% end %>
     <% end %>
   <% end %>
   <% if @projects_filtered%>
     <%= link_to projects_path do %>
-      <%= content_tag :span, t(:back_to_all_project), class: "button button--large button--white" %>
+      <%= content_tag :span, t(:back_to_all_project), class: "button button--large button--light-gray" %>
     <% end %>
   <% else %>
     <% link_to do %>
-      <% content_tag :span, t(:show_more), class: "button button--large button--white" %>
+      <% content_tag :span, t(:show_more), class: "button button--large button--light-gray" %>
     <% end %>
   <% end %>
 </section>

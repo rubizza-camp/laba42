@@ -16,6 +16,7 @@
   }
 
   &__item {
+    background-color: $white-color;
     border: 0.125rem solid $gray-color;
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 0.5rem 0 rgba($black-color-specific, 0.2);
@@ -32,6 +33,7 @@
       border: 2px solid $skills-blue-opacity;
       box-shadow: 0 0.25rem 0.625rem 0 rgba($black-color-specific, 0.2);
       background-color: $skills-blue-opacity;
+      transition-duration: 0.4s;
     }
   }
 
