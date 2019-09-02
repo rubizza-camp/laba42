@@ -23,7 +23,7 @@
   <h3 class="start-secondary__title"><%= t(:show_wow) %></h3>
   <div class="start-secondary__wrapper">
     <% @projects.each do |p|  %>
-      <%= link_to project_path(p), style: 'text-decoration: none; color: black;'  do %>
+      <%= link_to project_path(p), style: 'text-decoration: none; color: black;' do %>
       <div class="start-secondary__item">
         <div class="start-secondary__item-wrapper">
           <h5 class="start-secondary__item-title" ><%= p.title %></h5>

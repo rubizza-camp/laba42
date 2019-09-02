@@ -141,3 +141,5 @@ en:
   accept: "accept"
   delete_project: "Delete"
   your_projects: "Yours projects"
+  make_sure: "Make sure"
+  not_empty: "not empty field"

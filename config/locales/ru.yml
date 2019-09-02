@@ -135,3 +135,5 @@ ru:
   accept: "принят"
   delete_project: "Удалить"
   your_projects: "Ваши проекты"
+  make_sure: "Убедитесь"
+  not_empty: "не пустые поля"

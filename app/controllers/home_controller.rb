@@ -6,6 +6,6 @@ class HomeController < ApplicationController
   end
 
   def my_projects
-    @projects = current_user.projects
+    @projects = current_user.projects if current_user
   end
 end
