@@ -1,16 +1,4 @@
-<section class="top-menue">
-  <%= link_to projects_path do %>
-    <%= content_tag :span, t(:all_projects), class: "top-menue__item-first" %>
-  <% end %>
-  <% if current_user && current_user.role == 'customer' %>
-    <%= link_to my_projects_path do %>
-      <%= content_tag :span, t(:my_projects), class: "top-menue__item" %>
-    <% end %>
-  <% end %>
-  <%= link_to "#" do %>
-    <%= content_tag :span, t(:favorites), class: "top-menue__item" %>
-  <% end %>
-</section>
+<%= render partial: "shared/top-vertical-menu" %>
 
 <div class="margin-1-2rem in-line-items">
   <div class="project__cost">

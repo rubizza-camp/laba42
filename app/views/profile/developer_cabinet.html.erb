@@ -1,14 +1,4 @@
-<section class="top-menue">
-  <%= link_to projects_path do %>
-    <%= content_tag :span, t(:all_projects), class: "top-menue__item-first" %>
-  <% end %>
-  <%= link_to applies_path do %>
-    <%= content_tag :span, t(:my_projects), class: "top-menue__item" %>
-  <% end %>
-  <%= link_to "#" do %>
-    <%= content_tag :span, t(:favorites), class: "top-menue__item" %>
-  <% end %>
-</section>
+<%= render partial: "shared/top-vertical-menu" %>
 <h1 class="developer__title"><%= t(:this_we_find) %></h1>
 <div class="start-secondary__wrapper">
   <% @projects.each do |p|  %>
