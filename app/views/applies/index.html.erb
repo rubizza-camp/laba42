@@ -1,28 +1,37 @@
 <% if user_signed_in? %>
   <h1><%= "#{t(:applies)} #{current_user.name}" %></h1>
+  <hr>
+    <% if @applies.empty? %>
+
+      <h3><%= t(:your_applies_empty) %></h3>
+
+    <% else %>
+
       <% @applies.each do |apply| %>
         <div class="card card-footer mt-3">
           <%= link_to project_path(apply.project), style: 'text-decoration: none; color: black;'  do %>
-              <h3><%= apply.project.title %></h3>
-              <div class="text-muted">
-             <%= t(:deadline) %>:
-                <%= apply.project.deadline.strftime("%d  %h  %Y") %>
-                <div class="">
-                  <%= t(:status) %>:
-                  <%= t(:denied) if apply.apply_status == false  %>
-                  <%= t(:waiting) if apply.apply_status == nil  %>
-                  <%= t(:accept) if apply.apply_status == true  %>
-                </div>
+            <h3><%= apply.project.title %></h3>
+            <div class="text-muted">
+              <%= t(:deadline) %>:
+              <%= apply.project.deadline.strftime("%d  %h  %Y") %>
+              <div class="">
+                <%= t(:status) %>:
+                <%= t(:denied) if apply.apply_status == false  %>
+                <%= t(:waiting) if apply.apply_status == nil  %>
+                <%= t(:accept) if apply.apply_status == true  %>
               </div>
+            </div>
           <% end %>
           <div class="project-applies-refuse-button button--large">
-              <% if can? :destroy, apply %>
-                <%= button_to t(:refuse_project), apply, method: :delete, class: 'button button--large button--blue mb-0' %>
-              <% end %>
+            <% if can? :destroy, apply %>
+              <%= button_to t(:refuse_project), apply, method: :delete, class: 'button button--large button--blue mb-0' %>
+            <% end %>
           </div>
         </div>
       <% end %>
+    <% end %>
 <% end %>
+<hr>
 <div class="mt-3">
-<%= link_to t(:back_to_all_project), projects_path,class: 'project-company-name' %>
+<%= link_to t(:back_to_all_project), projects_path,class: 'project__company-name' %>
 </div>

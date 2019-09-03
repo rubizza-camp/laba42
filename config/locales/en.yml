@@ -143,3 +143,6 @@ en:
   your_projects: "Yours projects"
   make_sure: "Make sure"
   not_empty: "not empty field"
+  your_applies_empty: "you havn`t responses..."
+  post: "Post"
+  no_projects: "you have no projects..."

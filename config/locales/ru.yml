@@ -137,3 +137,6 @@ ru:
   your_projects: "Ваши проекты"
   make_sure: "Убедитесь"
   not_empty: "не пустые поля"
+  your_applies_empty: "у вас нет откликов..."
+  post: "Разместить"
+  no_projects: "у вас нет проектов..."
