@@ -14,12 +14,9 @@
             <div class="text-muted">
               <%= t(:deadline) %>:
               <%= apply.project.deadline.strftime("%d  %h  %Y") %>
-              <div class="">
-                <%= t(:status) %>:
-                <%= t(:denied) if apply.apply_status == false  %>
-                <%= t(:waiting) if apply.apply_status == nil  %>
-                <%= t(:accept) if apply.apply_status == true  %>
-              </div>
+
+              <%= render partial: "shared/status-line", locals: { apply: apply } %>
+
             </div>
           <% end %>
           <div class="project-applies-refuse-button button--large">

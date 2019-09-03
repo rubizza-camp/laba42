@@ -146,3 +146,5 @@ en:
   your_applies_empty: "you havn`t responses..."
   post: "Post"
   no_projects: "you have no projects..."
+  closed: "Closed"
+  quit: "Refused a response"

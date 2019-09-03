@@ -68,7 +68,6 @@
       </p>
     </div>
   <% end %>
-
     <% if @apply %>
     <%= link_to applies_path, style: 'text-decoration: none; color: black;' do  %>
       <p class="project__apply-text">
@@ -77,12 +76,9 @@
         <%= @apply.created_at.localtime.strftime('%d/%m/%Y %H:%M') %>
         </div>
       </p>
-      <div class="project__company-name col-md-2">
-        <%= t(:status) %>
-        <%= t(:denied) if @apply.apply_status == false  %>
-        <%= t(:waiting) if @apply.apply_status == nil  %>
-        <%= t(:accept) if @apply.apply_status == true  %>
-      </div>
+
+    <%= render partial: "shared/status-line", locals: { apply: @apply } %>
+
     <% end %>
     <% else %>
       <%= button_to t(:apply_project), {controller: 'applies', action: 'create', project_id: @project.id}, class: 'button button--blue button--login project__button-position' %>
