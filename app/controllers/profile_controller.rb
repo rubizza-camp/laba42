@@ -45,6 +45,7 @@ class ProfileController < ApplicationController
       @projects = Project.all
       render 'profile/developer_cabinet'
     else
+      @projects = current_user.projects.includes(:applies)
       render 'profile/customer_cabinet'
     end
   end

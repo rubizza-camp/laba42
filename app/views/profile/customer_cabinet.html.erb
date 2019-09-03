@@ -25,7 +25,7 @@
     </div>
     <div class="customer-relative">
       <%= image_tag("arrow.svg", alt: "arrow", class: "customer__arrow") %>
-      <%= link_to do %>
+      <%= link_to new_project_path do %>
         <%= content_tag :span, image_tag("add.svg", alt: "add", class: "customer__img") + t(:add_task) %>
       <% end %>
     </div>
@@ -33,16 +33,27 @@
 
   <section class="customer__body">
     <div class="customer-body-wrapper">
-      <h1 class="customer__title"><%= t(:responses) %></h1>
-      <div class="customer__response">
-        <%= image_tag("respons.png", alt: "response") %>
-      </div>
-      <div class="customer__response">
-        <%= image_tag("respons.png", alt: "response") %>
-      </div>
-      <div class="customer__response">
-        <%= image_tag("respons.png", alt: "response") %>
-      </div>
+      <h1 class="customer__title"><%= t(:responses) %> (<%= @projects.inject(0) { |sum,p| sum + p.applies.size } %>)</h1>
+
+        <div class="start-secondary__wrapper">
+          <% @projects.each do |project|  %>
+            <div class="start-secondary__item">
+              <%= link_to project_path(project), style: 'text-decoration: none; color: black;'  do %>
+                <div class="start-secondary__item-wrapper">
+                  <h5 class="start-secondary__item-title" ><%= project.title %></h5>
+                  <span class="start-secondary__item-subtitle-item"><%= project.project_type %> <%= project.cost %></span>
+                  <span class="start-secondary__item-subtitle-item"><%= t(:published) %><%= project.created_at.localtime.strftime('%d/%m/%Y') %></span>
+                  <span class="start-secondary__item-subtitle-item">Истекает через <%= (Date.today..project.deadline).count %> дней</span>
+                  <p class="start-secondary__item-text" ><%= project.info[0..120] %>...</p>
+                  <p class="start-secondary__item-subtitle-item"><%= project.skills %></p>
+                  <span class="start-secondary__item-text" > Новые отклики <%= project.applies.size %></span>
+                  <span class="start-secondary__item-text" > Всего откликов <%= project.applies.size %></span>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
       <div class="customer__fixed">
         <%= link_to new_project_path do %>
           <%= image_tag("plus.svg", alt: "plus") %>
