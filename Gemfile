@@ -70,7 +70,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'simplecov'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'webdrivers'
   gem 'rspec', '~> 3.8'
   gem 'rspec-rails', '~> 3.8'
 end
