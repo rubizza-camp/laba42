@@ -13,7 +13,9 @@ Rails.application.routes.draw do
     devise_for :users, skip: :omniauth_callbacks
     root to: 'home#index'
 
-    resources :projects
+    resources :projects do
+      get 'applies'
+    end
     resources :comments
     resources :applies
     resource :profile, controller: 'profile', only: %i[edit update] do

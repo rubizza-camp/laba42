@@ -46,8 +46,10 @@
                   <span class="start-secondary__item-subtitle-item">Истекает через <%= (Date.today..project.deadline).count %> дней</span>
                   <p class="start-secondary__item-text" ><%= project.info[0..120] %>...</p>
                   <p class="start-secondary__item-subtitle-item"><%= project.skills %></p>
-                  <span class="start-secondary__item-text" > Новые отклики <%= project.applies.size %></span>
-                  <span class="start-secondary__item-text" > Всего откликов <%= project.applies.size %></span>
+                  <%= link_to project_applies_path(project_id: project.id) do %>
+                    <span class="start-secondary__item-text" > Новые отклики <%= project.applies.size %></span>
+                    <span class="start-secondary__item-text" > Всего откликов <%= project.applies.size %></span>
+                  <% end %>
                 </div>
               <% end %>
             </div>

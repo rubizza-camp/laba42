@@ -40,6 +40,10 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
+  def applies
+    @applies = @projects.includes(:applies).find(params[:project_id]).applies.load
+  end
+
   private
 
   def project_params

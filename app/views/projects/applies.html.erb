@@ -1,0 +1,26 @@
+<% if user_signed_in? %>
+
+  <h1><%= "Откликнулись на ваши проекты, #{current_user.name}" %></h1>
+
+  <body>
+    <table>
+      <tr>
+        <th>Name:</th>
+        <th>Email:</th>
+        <th>Info:</th>
+        <th colspan="4"></th>
+        <th></th>
+      </tr>
+
+      <% @applies.each do |a| %>
+        <tr>
+          <td><%= a.user.name %></td>
+          <td><%= a.user.email %></td>
+          <td><%= a.user.info %></td>
+        </tr>
+      <% end %>
+    </table>
+  <body>
+<% end %>
+
+<%= link_to 'Back to Cabinet', cabinet_profile_path %>
