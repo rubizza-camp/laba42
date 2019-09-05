@@ -4,7 +4,7 @@
     <h2 class="start-large__subtitle"><%= t(:start_page_subtitle) %></h2>
     <div>
       <% if user_signed_in? %>
-        <% if current_user.role == 'customer' %>
+        <% if current_user.customer? %>
          <%= link_to new_project_path  do %>
           <%= content_tag :span, t(:start_page_button), class: "button button--blue button--large" %>
          <% end %>

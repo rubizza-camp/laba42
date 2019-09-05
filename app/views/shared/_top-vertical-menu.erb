@@ -3,12 +3,12 @@
     <%= content_tag :span, t(:all_projects), class: "top-menue__item-first" %>
   <% end %>
   <% if current_user %>
-    <% if current_user.role == 'customer' %>
+    <% if current_user.customer? %>
       <%= link_to my_projects_path do %>
         <%= content_tag :span, t(:my_projects), class: "top-menue__item" %>
       <% end %>
     <% end %>
-    <% if current_user.role == 'developer' %>
+    <% if current_user.developer? %>
       <%= link_to applies_path do %>
         <%= content_tag :span, t(:apply), class: "top-menue__item" %>
       <% end %>

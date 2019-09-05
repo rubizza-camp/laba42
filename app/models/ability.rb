@@ -11,6 +11,6 @@ class Ability
 
     can :manage, Comment, user_id: user.id
     can :manage, Apply, user_id: user.id if user.role?
-    can :manage, Project, user_id: user.id if user.role == 'customer'
+    can :manage, Project, user_id: user.id if user.customer?
   end
 end
