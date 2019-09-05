@@ -70,9 +70,9 @@ group :test do
   gem 'selenium-webdriver'
   gem 'simplecov'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'webdrivers'
   gem 'rspec', '~> 3.8'
   gem 'rspec-rails', '~> 3.8'
+  gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -81,5 +81,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'google-api-client', '~> 0.13.6'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2', '~> 0.2.2'
-
 gem 'cancancan'
