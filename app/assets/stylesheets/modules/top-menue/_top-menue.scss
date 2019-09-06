@@ -3,11 +3,11 @@
   border-bottom: 1px solid $top-menue-border;
   display: flex;
   font-size: 0.975rem;
+  font-weight: lighter;
   justify-content: space-between;
   margin-top: 2rem;
   padding-bottom: 0.5rem;
   width: 12.75rem;
-  font-weight: lighter;
 
   a {
     text-decoration: none;
@@ -20,8 +20,8 @@
     &-active {
       border-bottom: 2px solid $main-blue;
       color: $main-blue;
-      padding-bottom: 0.65rem;
       font-weight: bold;
+      padding-bottom: 0.52rem;
     }
   }
 }
