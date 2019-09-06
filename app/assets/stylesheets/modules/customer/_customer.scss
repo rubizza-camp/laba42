@@ -1,66 +1,92 @@
 .customer {
   display: flex;
 
-  &__dashboard {
-    background-color: $background-light-gray;
-    width: 18rem;
-
-    a {
-      color: rgba($customer-blue, 0.9);
-    }
-
-    a:hover {
-      color: rgba($customer-blue, 0.9);
-      text-decoration: none;
-    }
-  }
-
-  &__img {
-    margin-right: 0.625rem;
-  }
-
-  &-relative {
-    background-color: $white-color;
-    border: 0.09rem solid $skills-blue-opacity;
-    border-radius: 0.2rem;
-    margin: 0 auto 0.3rem;
-    padding: 1.375rem 1rem;
-    position: relative;
-
-    &:hover {
-      background-color: $skills-blue-opacity;
-      border-radius: 0.2rem;
-    }
-  }
-
-  &__arrow {
-    position: absolute;
-    right: 1.25rem;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
   &__body {
     background-color: $background-light-gray;
     width: 100%;
   }
 
   &-body-wrapper {
-    margin: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
   }
 
-  &__title {
-    color: $customer-blue-title;
-    font-size: 2.25rem;
+
+  &__apply-item {
+    background-color: $white-color;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.5rem 0 rgba($black-color-specific, 0.15);
+    margin-top: 2.5rem;
+    min-height: 17rem;
+    min-width: 34.5rem;
+
+    &:hover {
+      bottom: 0.25rem;
+      box-shadow: 0 0.2rem 0.3rem 0.2rem rgba($black-color-specific, 0.1);
+      position: relative;
+      top: -0.3rem;
+    }
+  }
+}
+
+.apply-card {
+  margin: 1.5rem 1rem 0;
+
+  &-head {
+    background-color: #E5ECF9;
+    display: flex;
+    min-height: 1.5rem;
+    margin-bottom: 0.75rem;
+
+    &-title {
+      width: 30rem;
+    }
   }
 
-  &__response {
-    margin: 0.625rem 0;
+  &-info {
+    background-color: #f7cfcf;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+
+    &-type {
+      width: 9.5rem;
+    }
+
+    &-time {
+      font-size: 0.75rem;
+      max-width: 11rem;
+      min-width: 9.4375rem;
+      padding-top: 0.2rem;
+    }
+
   }
 
-  &__fixed {
-    position: fixed;
-    right: 10%;
-    top: 80%;
+  &-body {
+    background-color: #C6D880;
+    font-size: 0.875rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    width: 32.5rem;
   }
+
+  &-skills {
+    display: flex;
+    &-item {
+      padding: 0 0.5rem;
+      margin-right: 0.5rem;
+      background-color: #617af9;
+    }
+  }
+
+  &-footer {
+    border-top: 2px solid $skills-blue-opacity;
+    height: 4rem;
+    margin-top: 1.5rem;
+    padding-top: 1.3rem;
+  }
+
+
 }

@@ -18,9 +18,9 @@
     text-align: center;
 
     &-active {
-      border-bottom: 1px solid $main-blue;
+      border-bottom: 2px solid $main-blue;
       color: $main-blue;
-      padding-bottom: 0.68rem;
+      padding-bottom: 0.65rem;
       font-weight: bold;
     }
   }
