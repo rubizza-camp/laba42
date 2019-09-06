@@ -148,3 +148,7 @@ en:
   no_projects: "you have no projects..."
   closed: "Closed"
   quit: "Refused a response"
+  seekers: "Seekers"
+  profile: "Profile"
+  active: "Active"
+  inactive: "Inactive"
