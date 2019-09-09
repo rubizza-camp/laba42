@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.8125rem;
   }
 
 
@@ -35,38 +35,46 @@
   margin: 1.5rem 1rem 0;
 
   &-head {
-    background-color: #E5ECF9;
     display: flex;
-    min-height: 1.5rem;
     margin-bottom: 0.75rem;
+    min-height: 1.5rem;
 
     &-title {
+      font-size: 1.125rem;
+      font-weight: bold;
       width: 30rem;
     }
   }
 
   &-info {
-    background-color: #f7cfcf;
     display: flex;
+    height: 1.5rem;
     justify-content: space-between;
+    line-height: 1.5rem;
     margin-bottom: 0.75rem;
 
     &-type {
+      background-color: $background-yellow-light;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.0625rem;
+      text-align: center;
+      text-transform: uppercase;
       width: 9.5rem;
     }
 
     &-time {
+      color: $black-color-opacity-0-6;
       font-size: 0.75rem;
       max-width: 11rem;
       min-width: 9.4375rem;
-      padding-top: 0.2rem;
     }
 
   }
 
   &-body {
-    background-color: #C6D880;
     font-size: 0.875rem;
+    font-weight: normal;
     height: 2.5rem;
     margin-bottom: 1rem;
     width: 32.5rem;
@@ -75,18 +83,20 @@
   &-skills {
     display: flex;
     &-item {
-      padding: 0 0.5rem;
+      background-color: $skills-blue-opacity;
+      color: $footer-blue;
+      font-size: 0.7875rem;
+      letter-spacing: 0.0425rem;
       margin-right: 0.5rem;
-      background-color: #617af9;
+      padding: 0 0.5rem;
+      text-transform: uppercase;
     }
   }
 
   &-footer {
-    border-top: 2px solid $skills-blue-opacity;
+    border-top: 1px solid $skills-blue-opacity;
     height: 4rem;
     margin-top: 1.5rem;
     padding-top: 1.3rem;
   }
-
-
 }

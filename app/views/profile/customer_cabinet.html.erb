@@ -10,28 +10,31 @@
 
 <section class="customer__body">
     <div class="customer-body-wrapper">
-      <% 5.times do  %>
+
+      <% %w(new_apply applied choose_applier).each do |state| %>
+
       <div class="customer__apply-item">
         <div class="apply-card">
 
               <div class="apply-card-head">
-                <div class="apply-card-head-title"><%= 'HEAD' %></div>
+                <div class="apply-card-head-title"><%= 'Bug fix - Mobile Development (IOS)' %></div>
                 <div class="apply-card-head-dots"><%= '||' %></div>
               </div>
 
               <div class="apply-card-info">
-                <div class="apply-card-info-type"> <%= 'TEST project' %></div>
-                <div class="apply-card-info-time"> <%= 'Expires of 2019-10-10' %></div>
-                <div class="apply-card-info-time"> <%= 'Expires of 2019-10-10' %></div>
+                <div class="apply-card-info-type"> <%= 'тестовое задание' %></div>
+                <div class="apply-card-info-time"> <%= 'Опубликовано 22.08.2019' %></div>
+                <div class="apply-card-info-time"> <%= 'Истекает через 15 дней' %></div>
               </div>
 
               <div class="apply-card-body">
-                <%= 'Универсальное свойство, которое позволяет одновременно задать значения transition-property, transition-duration..' %>
+                <%= 'Have few Bug Expertse Needed iOS Developer & Android Developer. Swift and ObjectiveC...' %>
               </div>
 
               <div class="apply-card-skills">
-                <div class="apply-card-skills-item">ios</div>
-                <div class="apply-card-skills-item">css</div>
+                <% ['iOS Jobs', 'Swift Jobs', 'NativeScript Jobs'].each do |item| %>
+                <div class="apply-card-skills-item"><%= item %></div>
+                  <% end %>
               </div>
 
               <div class="apply-card-footer">
@@ -40,8 +43,8 @@
               </div>
        </div>
       </div>
-    <% end %>
 
+    <% end %>
 
     </div>
 </section>
