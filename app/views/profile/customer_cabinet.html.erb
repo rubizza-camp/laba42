@@ -13,38 +13,47 @@
 
       <% %w(new_apply applied choose_applier).each do |state| %>
 
-      <div class="customer__apply-item">
-        <div class="apply-card">
+        <%= link_to '', class:'customer__apply-item' do  %>
+            <div class="apply-card">
 
-              <div class="apply-card-head">
-                <div class="apply-card-head-title"><%= 'Bug fix - Mobile Development (IOS)' %></div>
-                <div class="apply-card-head-dots"><%= '||' %></div>
-              </div>
+                  <div class="apply-card-head">
+                    <div class="apply-card-head-title"><%= 'Bug fix - Mobile Development (IOS)' %></div>
+                    <div class="apply-card-head-dots">
+                    
+                    </div>
+                  </div>
 
-              <div class="apply-card-info">
-                <div class="apply-card-info-type"> <%= 'тестовое задание' %></div>
-                <div class="apply-card-info-time"> <%= 'Опубликовано 22.08.2019' %></div>
-                <div class="apply-card-info-time"> <%= 'Истекает через 15 дней' %></div>
-              </div>
+                  <div class="apply-card-info">
+                    <div class="apply-card-info-type"> <%= 'тестовое задание' %></div>
+                    <div class="apply-card-info-time"> <%= 'Опубликовано 22.08.2019' %></div>
+                    <div class="apply-card-info-time"> <%= 'Истекает через 15 дней' %></div>
+                  </div>
 
-              <div class="apply-card-body">
-                <%= 'Have few Bug Expertse Needed iOS Developer & Android Developer. Swift and ObjectiveC...' %>
-              </div>
+                  <div class="apply-card-body">
+                    <%= 'Have few Bug Expertse Needed iOS Developer & Android Developer. Swift and ObjectiveC...' %>
+                  </div>
 
-              <div class="apply-card-skills">
-                <% ['iOS Jobs', 'Swift Jobs', 'NativeScript Jobs'].each do |item| %>
-                <div class="apply-card-skills-item"><%= item %></div>
-                  <% end %>
-              </div>
+                  <div class="apply-card-skills">
+                    <% ['iOS Jobs', 'Swift Jobs', 'NativeScript Jobs'].each do |item| %>
+                    <div class="apply-card-skills-item"><%= item %></div>
+                      <% end %>
+                  </div>
 
-              <div class="apply-card-footer">
+                  <div class="apply-card-footer">
 
-                <%= 'Новые отклики:' %>
-              </div>
-       </div>
-      </div>
-
+                    <%= 'Новые отклики:' %>
+                  </div>
+           </div>
+        <% end %>
     <% end %>
 
-    </div>
+      <div class="customer__apply-item background-color-empty-card">
+        <div class="apply-card apply-card-add_project">
+              <div class="apply-card-add_project-plus">+</div>
+              <div><%= t(:add_new_project_or_task) %></div>
+        </div>
+      </div>
+
+
+        </div>
 </section>

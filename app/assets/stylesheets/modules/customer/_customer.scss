@@ -1,3 +1,7 @@
+.background-color-empty-card {
+  background-color: $background-apply-card-empty;
+}
+
 .customer {
   display: flex;
 
@@ -18,14 +22,18 @@
     background-color: $white-color;
     border-radius: 0.625rem;
     box-shadow: 0 0 0.5rem 0 rgba($black-color-specific, 0.15);
+    color: $black-color;
+    height: 17rem;
     margin-top: 2.5rem;
-    min-height: 17rem;
-    min-width: 34.5rem;
+    text-decoration: none;
+    width: 34.5rem;
 
     &:hover {
       bottom: 0.25rem;
       box-shadow: 0 0.2rem 0.3rem 0.2rem rgba($black-color-specific, 0.1);
+      color: $black-color;
       position: relative;
+      text-decoration: none;
       top: -0.3rem;
     }
   }
@@ -36,13 +44,17 @@
 
   &-head {
     display: flex;
+    height: 1.5rem;
     margin-bottom: 0.75rem;
-    min-height: 1.5rem;
 
     &-title {
       font-size: 1.125rem;
       font-weight: bold;
       width: 30rem;
+    }
+
+    &-dots {
+
     }
   }
 
@@ -50,14 +62,14 @@
     display: flex;
     height: 1.5rem;
     justify-content: space-between;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
     margin-bottom: 0.75rem;
 
     &-type {
       background-color: $background-yellow-light;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.0625rem;
+      letter-spacing: 0.0825rem;
       text-align: center;
       text-transform: uppercase;
       width: 9.5rem;
@@ -98,5 +110,17 @@
     height: 4rem;
     margin-top: 1.5rem;
     padding-top: 1.3rem;
+  }
+
+  &-add_project {
+    color: $main-blue;
+    font-weight: 600;
+    padding-top: 3.3rem;
+    text-align: center;
+
+    &-plus{
+      font-size: 3rem;
+      font-weight: 400;
+    }
   }
 }
