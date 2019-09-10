@@ -19,7 +19,6 @@
 
 
   &__apply-item {
-    background-color: $white-color;
     border-radius: 0.625rem;
     box-shadow: 0 0 0.5rem 0 rgba($black-color-specific, 0.15);
     color: $black-color;
@@ -54,7 +53,16 @@
     }
 
     &-dots {
+      color: $dots-apply-card;
+      position: relative;
+      font-size: 1.5rem;
+      margin-left: auto;
+      text-orientation: mixed;
+      writing-mode: vertical-rl;
 
+      &:hover {
+        background-color: #B00100;
+      }
     }
   }
 
@@ -126,7 +134,7 @@
       color: $white-color;
       font-weight: bold;
       margin-right: 2rem;
-      margin-top: -0.4rem;
+      margin-top: -0.3rem;
       padding: 0.3rem;
     }
 
