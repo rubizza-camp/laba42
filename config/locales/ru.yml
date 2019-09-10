@@ -146,3 +146,6 @@ ru:
   active: "Активные"
   inactive: "Неактивные"
   add_new_project_or_task: "Добавить новый проект или задание"
+  project_assigned: "Проект назначен"
+  choose_developer: "Выберите кандидата для исполнения проекта"
+  feedback: "Отклики"

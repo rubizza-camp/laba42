@@ -153,3 +153,6 @@ en:
   active: "Active"
   inactive: "Inactive"
   add_new_project_or_task: "Add new project or task"
+  project_assigned: "Project assigned"
+  choose_developer: "Choose a candidate for the project"
+  feedback: "Feedback"

@@ -40,8 +40,32 @@
                   </div>
 
                   <div class="apply-card-footer">
+                    <% if state == 'new_apply' %>
+                      <div class="apply-card-footer-new"><%= t(:new_apply) %></div>
+                      <div class="apply-card-footer-new_dig"><%= 23 %></div>
+                      <div class="apply-card-footer-all_apply"><%= t(:all_apply) %></div>
+                      <div class="apply-card-footer-all_dig"><%= 40 %></div>
+                      <div class="apply-card-footer-views">
+                        <%= image_tag("views_eye.svg", alt: "eye") %>
+                        <%= 144 %>
+                      </div>
 
-                    <%= 'Новые отклики:' %>
+                    <% elsif state == 'applied'%>
+                      <div class="apply-card-footer-new">
+                        <%= t(:project_assigned) %>
+                      </div>
+                      <div class="apply-card-footer-assignes_developer">
+                        <%= 'Ilia Lesyn' %>
+                      </div>
+                    <% elsif state == 'choose_applier'%>
+                      <div class="apply-card-footer-choose_developer"><%= t(:choose_developer) %></div>
+                      <div class="apply-card-footer-allapply"><%= t(:feedback) %></div>
+                      <div class="apply-card-footer-alldig">20</div>
+                      <div class="apply-card-footer-views">
+                        <%= image_tag("views_eye.svg", alt: "eye") %>
+                        <%= 144 %>
+                      </div>
+                    <% end %>
                   </div>
            </div>
         <% end %>
