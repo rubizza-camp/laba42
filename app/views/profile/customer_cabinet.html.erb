@@ -9,17 +9,33 @@
 
 <section class="customer__body">
     <div class="customer-body-wrapper">
-      <% %w(new_apply applied choose_applier).each do |state| %>
 
-        <%= link_to '', class:'customer__apply-item' do  %>
-            <%= render partial: 'shared/apply_cards/apply-card', locals: {state: state} %>
+      <% if true #if user have project %>
+        
+        <% %w(new_apply applied choose_applier).each do |state| %>
+
+          <%= link_to '', class:'customer__apply-item' do  %>
+              <%= render partial: 'shared/apply_cards/apply-card', locals: {state: state} %>
+          <% end %>
+
         <% end %>
 
-      <% end %>
+          <%= link_to new_project_path, class:'customer__apply-item background-color-empty-card' do %>
+             <%= render partial: 'shared/apply_cards/apply-card-empty' %>
+          <%end %>
 
-        <%= link_to new_project_path, class:'customer__apply-item background-color-empty-card' do %>
-           <%= render partial: 'shared/apply_cards/apply-card-empty' %>
+      <% elsif true # if user no project %>
+
+        <div class="apply-card-zero_state">
+
+          <div class="apply-card-zero_state-title"><%= t(:create_your_first_project) %></div>
+
+          <%= link_to new_project_path, class:'customer__apply-item background-color-empty-card' do %>
+          <%= render partial: 'shared/apply_cards/apply-card-empty' %>
         <%end %>
 
         </div>
+
+      <% end %>
+    </div>
 </section>

@@ -1,6 +1,19 @@
 .apply-card {
   margin: 1.5rem 1rem 0;
 
+  &-zero_state {
+    margin: 10rem auto;
+
+    &-title {
+      font-size: 1.125rem;
+      line-height: 150%;
+      margin-left: 1rem;
+      text-align: center;
+      width: 18rem;
+    }
+  }
+
+
   &-head {
     display: flex;
     height: 1.5rem;
