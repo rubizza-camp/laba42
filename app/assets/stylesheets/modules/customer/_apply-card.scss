@@ -72,6 +72,7 @@
 
   &-skills {
     display: flex;
+
     &-item {
       background-color: $skills-blue-opacity;
       color: $footer-blue;
@@ -99,7 +100,7 @@
     }
 
     &-new_dig {
-      background-color: #617af9;
+      background-color: $main-blue;
       border-radius: 1rem;
       color: $white-color;
       font-weight: bold;
@@ -138,7 +139,7 @@
     padding-top: 3.3rem;
     text-align: center;
 
-    &-plus{
+    &-plus {
       font-size: 3rem;
       font-weight: 400;
     }
