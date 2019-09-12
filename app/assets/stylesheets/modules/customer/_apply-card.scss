@@ -20,8 +20,13 @@
     margin-bottom: 0.75rem;
 
     &-title {
+      display: inline-block;
       font-size: 1.125rem;
       font-weight: bold;
+      height: 1.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       width: 30rem;
     }
 
@@ -59,27 +64,31 @@
       max-width: 11rem;
       min-width: 9.4375rem;
     }
-
   }
 
   &-body {
     font-size: 0.875rem;
     font-weight: normal;
-    height: 2.5rem;
+    height: 2.7rem;
     margin-bottom: 1rem;
+    overflow: hidden;
     width: 32.5rem;
   }
 
   &-skills {
     display: flex;
+    flex-wrap: wrap;
+    height: 1.25rem;
+    overflow: hidden;
 
     &-item {
       background-color: $skills-blue-opacity;
       color: $footer-blue;
       font-size: 0.7875rem;
+      height: 1.25rem;
       letter-spacing: 0.0425rem;
       margin-right: 0.5rem;
-      padding: 0 0.5rem;
+      padding: 0.1rem 0.5rem;
       text-transform: uppercase;
     }
   }
